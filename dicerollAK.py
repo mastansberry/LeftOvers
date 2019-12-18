@@ -8,8 +8,11 @@ def diceroll(n):
     returns an int
     '''
     total = 0 # Initialize the accumulator for the total roll
+    
     for die in range(n):
-        total += random.randint(1, 6)
+        dice = random.randint(1, 6)
+        total += dice
+        print dice
     return total
 
  
@@ -41,5 +44,5 @@ def test_diceroll(roller):
     correct = correct and tester(100)
     return correct
     
-if __name__=="__main__":
+#if __name__=="__main__":
     test_diceroll(diceroll)
